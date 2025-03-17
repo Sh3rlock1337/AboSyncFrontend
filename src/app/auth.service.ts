@@ -12,10 +12,8 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   private isAuthenticated = false;
-  //FOR local http://127.0.0.1:8000/api/
-  //for public https://abosync.com/api/
-  public baseUrl = 'https://abosync.com/api/';
-    
+  public baseUrl = 'http://127.0.0.1:8000/api/';
+
 
   constructor(private http: HttpClient,
     private cookieService: CookieService, private router: Router) {
@@ -48,7 +46,7 @@ export class AuthService {
 //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
   getAboInformation(aboType: string): Observable<any> {
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json', 
+      'Content-Type': 'application/json',
       'X-CSRFToken': this.getCookie('csrftoken'),
       'Authorization': 'Bearer ' + this.getAuthToken(),
       // 'X-SessionID': this.getCookie('sessionid')
@@ -94,7 +92,7 @@ export class AuthService {
     );
   }
 
-  
+
 //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
   getAboList() {
     const headers = new HttpHeaders({
@@ -125,7 +123,7 @@ export class AuthService {
     // Beachte, dass dies je nach deiner Backend-Implementierung variieren kann
 
     // Hier ein Beispiel, wie du den Token aus dem localStorage entfernen könntest
-    
+
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'X-CSRFToken': this.getCookie('csrftoken'),
@@ -140,7 +138,7 @@ export class AuthService {
       tap(() => {
    //     console.log('Logout successful');
         // this.removeCookies();  // Call function to remove cookies
-        
+
       })
     );
   }
@@ -309,7 +307,7 @@ export class AuthService {
 
     // Erstellen des Body als JSON-Objekt
     const body = JSON.stringify({
-     
+
     });
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -332,7 +330,7 @@ export class AuthService {
 
 
   postForgotPassword(email: string): Observable<any> {
-   
+
     // Erstellen des Body als JSON-Objekt
     const body = JSON.stringify({
       email: email,
@@ -343,12 +341,12 @@ export class AuthService {
     // Senden der API-Anfrage an den Server
     return this.http.post(this.baseUrl + 'forgotpassword/', body, { headers: headers, responseType: 'json' }).pipe(
       tap(data => {
-       
+
       }),
       catchError(error => {
           // Sie können hier Ihre Logik ausführen, z.B. den Benutzer informieren
         throw error; // Gibt ein Observable mit einem Null-Wert zurück
-        
+
 
       })
     );
@@ -432,7 +430,7 @@ export class AuthService {
       // 'X-SessionID': this.getCookie('sessionid')
       'Content-Type': 'application/json',
     });
-    
+
     const body = JSON.stringify({
       'input': input,
     });
@@ -447,7 +445,7 @@ export class AuthService {
   }
 
 
-  
+
 
 
 
@@ -544,7 +542,7 @@ export class AuthService {
       catchError(error => {
   //      console.log("Session expired");
        // console.error('Error:', headers); // handle the error here
-        
+
         throw ""; // re-throw the error so the subscriber knows that an error occurred
       })
     );
