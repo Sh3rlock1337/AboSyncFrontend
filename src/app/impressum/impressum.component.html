@@ -1,0 +1,143 @@
+<!--Menu Side-->
+
+<div id="menu-responsive" class="menu-wrapper hidden">
+  <div class="as-rmenu">
+    <button id="as-btn-close" class="as-btn-close">
+      <span>
+        <img src="/assets/svgs/close.svg" alt="">
+      </span>
+    </button>
+  </div>
+  <div class="res-menulist">
+    <ul>
+      <li>
+        <a class="custom-cursor" (click)="sendToLandingPage()">Home</a>
+      </li>
+      <li>
+        <a href="">About</a>
+      </li>
+      <li>
+        <a class="custom-cursor" (click)="sendToRegister()">Registrieren</a>
+      </li>
+      <li>
+        <a class="custom-cursor" (click)="sendToLogin()">Einloggen</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="as-header">
+    <div id="menürow" class="navBar asHoS row">
+      <div class="as-logo col-md-4">
+        <img src="/assets/svgs/logo-landing.svg" alt="logo">
+      </div>
+      <!--Hier ist das menu, wenn responsive-->
+      <div id="burgermenu" class="as-burger-menu col-md-8 hidden">
+        <button id="btn-burgemenu" class="burgermenu-btn">
+          <img src="/assets/svgs/Icon ionic-ios-menu.svg" alt="">
+        </button>
+      </div>
+      <div class="as-menu col-md-auto">
+        <button class="btn-as-menu" (click)="sendToLandingPage()">Home</button>
+        <button hidden class="btn-as-menu">
+          About
+          <span>
+            <img src="/assets/svgs/arrow-down.svg" alt="dropdown">
+          </span>
+        </button>
+        <button (click)="sendToLogin()" class="btn-as-menu">
+          Einloggen
+        </button>
+        <button (click)="sendToRegister()" class="btn-as-menu">
+          Registrieren
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!--Section 1 image-->
+ 
+
+  <!--Hier werden die grids angezeigt-->
+
+
+  <section class="as-container">
+    <div class="as-section3">
+      <h1 class="as-header-bold"></h1>
+      <br />
+      <div class="as-gridSysten2">
+        <div class="as-grid2">
+          
+          <div class="as-gridcard proAbo">
+            <div class="wrapper">
+              <div class="basicCard">
+               
+                <h1>Impressum</h1>
+
+                <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+                <p>
+                  Felix Burkhard<br />
+                  Erstellen und Vermarkten von Onlinedienstleistungen<br />
+                  Am Schelmengraben 29<br />
+                  79346 Endingen
+                </p>
+
+                <h2>Kontakt</h2>
+                <p>
+                  Telefon: +49 176 32518671<br />
+                  E-Mail: support(AT)abosync.com
+                </p>
+
+                <h2>Umsatzsteuer-ID</h2>
+                <p>
+                  Gemäß der Kleinunternehmerregelung aus &sect;19 UStG wird keine Umsatzsteuer ausgewiesen.
+
+                </p>
+
+                <h2>EU-Streitschlichtung</h2>
+                <p>Die Europ&auml;ische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/.<br /> Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+
+                <h2>Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
+                <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+                <p>Quelle: https://www.e-recht24.de</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="as-footer">
+    <div class="container">
+      <div class="row">
+        <!-- Footer Bereich für Kontaktinformationen -->
+        <div class="col-md-4 footer-contact">
+          <h3>Kontakt</h3>
+          <p><strong style="color:white">E-Mail: </strong> <span style="color:white">support(AT)abosync.com</span></p>
+          <!-- <p><strong>Telefon:</strong> +49 123 456 7890</p>-->
+        </div>
+
+        <!-- Footer Bereich für Links oder Informationen -->
+        <div class="col-md-4 footer-links">
+          <h3>Nützliche Links</h3>
+          <ul>
+            <li><a class="custom-cursor" (click)="datenschutz()">Datenschutz</a></li>
+
+            <li><a class="custom-cursor" (click)="agb()">AGB</a></li>
+            <li><a class="custom-cursor" (click)="impressum()">Impressum</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Bereich für soziale Medien -->
+        <div class="col-md-4 footer-social">
+          <h3>Folg uns!</h3>
+          <a href="#"><img src="/assets/svgs/icons8-facebook.svg" alt="Facebook"></a>
+          <a href="#"><img src="/assets/svgs/icons8-instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,789 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+
+  $fontBlack: #141414;
+  $fontBlackLight: #818181;
+  $backgroundGray: #F5F5F5;
+  $lightGraySearchbar: #F2F2F2;
+  $menu-point-hover: #EDEDED;
+  $mainPink: #EE31DA;
+  $white: #FFFFFF;
+  /*Darkmode*/
+  $BackgroundDark: #060415;
+
+
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  overflow-x: hidden;
+  background-color: $backgroundGray;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+  color: $fontBlack;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+li {
+  color: $fontBlack;
+}
+
+span {
+  padding: 0px;
+  margin: 0px;
+}
+
+input:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* Für Webkit-basierte Browser wie Chrome und Safari */
+}
+
+.Background {
+  position: fixed;
+  z-index: -50;
+  top: -80px;
+  right: -50px;
+}
+
+.selectOption-Btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  height: 35px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  background-color: $white;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: background-color 0.30s ease-in-out;
+  cursor: pointer;
+}
+
+
+select:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Verbergen des standardmäßigen Dropdown-Pfeil-Icons */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url('/assets/images/Icon ionic-ios-arrow-down.png'); /* Benutzerdefiniertes Icon setzen */
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto;
+  padding-right: 40px; /* Anpassen des Abstands zum Icon */
+}
+
+
+.top-Bar {
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 8.5px );
+  -webkit-backdrop-filter: blur( 8.5px );
+  border-radius: 0px 0px 10px 10px;
+  position: fixed;
+  height: auto;
+  z-index: 1;
+}
+
+.logo-top-bar img {
+  height: 35px;
+  width: auto;
+}
+
+.top-bar-content {
+  padding-left: 45px;
+  padding-right: 45px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.mid-colm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar-top {
+  height: 38px;
+  width: 450px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  background-color: $lightGraySearchbar;
+}
+
+
+.accountDetails {
+  position: static;
+  display: inline-flex;
+  height: 38px;
+  width: auto;
+  align-items: center;
+  padding-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.accountDetails:hover {
+  background-color: $backgroundGray;
+}
+
+.image-profil {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-right: 10px;
+  height: 35px;
+  width: 35px;
+  background-color: $backgroundGray;
+}
+
+
+/*Hier beschreibe ich den Body*/
+.main-body {
+  z-index: 0;
+  padding-top: 120px;
+  display: flex;
+}
+
+
+/*Main Left Menu*/
+
+.inpage-Navigation-left {
+  margin-left: 57px;
+  position: fixed;
+  overflow: hidden;
+  display: block;
+}
+
+/*Main Right Content*/
+.content-area {
+  width: auto;
+  margin-left: 30%;
+  position: absolute;
+}
+
+
+
+.username-hello {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+.menu-content {
+  margin-top: 20px;
+}
+
+.Menu-Point-Style {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.Menu-Point-Style:hover {
+  background-color: $menu-point-hover;
+  border-radius: 10px;
+  transition: background-color 0.25s ease 0s;
+}
+
+.Menu-Icons {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.Menu-Point-Is-Selected {
+  background-color: $white;
+  border-radius: 10px;
+}
+
+/*Responsive view menu*/
+
+
+
+.headline {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+
+
+.headline-smaller-abos {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/*Design der Abo - Card*/
+
+.abo-card {
+  margin-top: 15px;
+  margin-right: 15px;
+  margin: none;
+  border: none;
+  border-radius: 10px;
+  padding: 0px 0px;
+  width: auto;
+}
+
+.card-body {
+  flex-grow: 1;
+}
+
+
+
+
+.abo-img {
+  height: 120px;
+  width: 120px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.abo-img img {
+  /*Hier kommt das Bild*/
+  height: 120px;
+  width: 120px;
+  border-radius: 10px;
+}
+
+.Categorie {
+  font-size: 12px;
+  font-weight: bold;
+  color: $mainPink;
+}
+
+.NameOfAbo {
+  font-size: 14px;
+}
+
+.DateOdPayment {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+
+/*Darkmode Button*/
+
+.darkmode-Button {
+  display: flex;
+  justify-content: center;
+}
+
+/*Darmode Button*/
+
+.DarkmodeLightmodeButton {
+  margin-top: 15px;
+  height: 55px;
+  width: 55px;
+  border: none;
+  border-radius: 40px;
+  background-color: $menu-point-hover;
+  transition: width 0.25s ease-in-out, border-radius 0.25s ease-in-out, background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.DarkmodeLightmodeButton:hover {
+  height: 55px;
+  width: 293px;
+  border-radius: 10px;
+  background-color: $menu-point-hover;
+  color: #c89410;
+}
+
+
+/*Show Abo Details*/
+.AboBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgba(244, 158, 72, 0.5), rgba(182, 77, 150, 0.6));
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 10px;
+  border: none;
+  background-color: $white;
+  cursor: pointer;
+  transition: background-color 0.30s ease-in-out;
+}
+
+.AddImage {
+  height: 30px;
+  width: auto;
+  color: #818181;
+}
+
+.input-container:hover {
+  background-color: $menu-point-hover;
+}
+
+.imgAboDetails {
+  border: none;
+  padding: 0px;
+  border-radius: 10px;
+}
+
+.AboDetails {
+  display: flex;
+  align-items: center;
+}
+
+.HeadlineAbo {
+  margin-left: 30px;
+  font-size: 60px;
+  font-weight: bold;
+  color: $white;
+}
+
+
+.content-Box {
+  overflow: auto;
+  height: 570px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(182, 77, 150, 0.4), rgba(255, 255, 255, 1));
+  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.top-button-bar {
+  position: absolute;
+  height: auto;
+  width: auto;
+  display: flex;
+  z-index: 2;
+}
+
+.bt-rounded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: auto;
+  color: $white;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: none;
+  border: 1px solid $white;
+}
+
+.bt-rounded:hover {
+  border: 2px solid $white;
+}
+
+.display-box-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: auto;
+  background-color: $mainPink;
+  color: $white;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.categorieBanner {
+  margin-left: 20px;
+}
+
+.icon-banner {
+  margin-right: 10px;
+}
+
+/*Information Box*/
+.Aboinformation-Box {
+  position: absolute;
+  margin-top: 55px;
+  height: auto;
+  width: auto;
+  background: $white;
+  backdrop-filter: blur( 8.5px );
+  -webkit-backdrop-filter: blur( 8.5px );
+  border-radius: 5px;
+  z-index: 1;
+}
+
+
+.addNameOfAbo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  height: 6 rem;
+  width: 100%;
+  font-size: 3.75rem;
+  font-weight: bold;
+  margin-left: 20px;
+  color: $white;
+}
+
+.addNameOfAbo::placeholder {
+  margin-left: 30px;
+  font-size: 3.75rem;
+  font-weight: bold;
+  color: $white;
+}
+
+.addNameOfAbo:focus {
+  background-color: rgba(229, 229, 229, 0.3);
+}
+
+
+/*Select Categorie*/
+.categorieSelection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  margin-left: 20px;
+  height: 35px;
+  width: auto;
+  background-color: $white;
+  border-radius: 30px;
+}
+
+
+/*
+background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.5px );
+-webkit-backdrop-filter: blur( 8.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+*/
+
+/*DropDown Style*/
+
+.dropDownCategorie {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.dropDownCategorie ul {
+  margin-left: 20px;
+}
+
+
+/*Dropdown Design*/
+
+.selectOptin-Btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  height: 35px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  background-color: $white;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: background-color 0.30s ease-in-out;
+  cursor: pointer;
+
+}  .selectOptin-Btn svg {
+    margin-left: 20px;
+    height: 18px;
+    width: 18px;
+  }
+
+  .selectOptin-Btn:hover {
+    background-color: $lightGraySearchbar;
+  }
+
+  .optionsList {
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: white;
+    margin-left: 20px;
+    padding: 5px;
+    transition: background-color 0.30s ease-in;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgb(203, 203, 203);
+    opacity: 0;
+    display: none;
+    transition: opacity 0.30s ease-in-out, display 0.30s ease-in-out;
+  }
+
+  .option {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .option img {
+    height: 20px;
+    width: 20px;
+    font-size: 14px;
+  }
+
+  .option:hover {
+    background-color: $lightGraySearchbar;
+  }
+
+  .optionsListShow {
+    display: block;
+    opacity: 1;
+  }
+
+  .selected {
+    background-color: $lightGraySearchbar;
+  }
+
+  .dropdownarrow {
+    transform: rotate(0deg);
+    transition: transform 0.30s ease-in-out;
+  }
+
+  .dropdownarrow-rotate {
+    transform: rotate(180deg);
+  }
+  /*Media Querys*/
+  /* Media Query für Bildschirmbreiten ab 1230px */
+  @media only screen and (max-width: 1230px) {
+
+    .searchbar-top {
+      display: none;
+    }
+
+    .accountDetails {
+      display: none;
+    }
+
+    .inpage-Navigation-left {
+      display: none;
+    }
+
+    .content-area {
+      box-sizing: border-box;
+      margin: 0px auto;
+      padding: 0px 20px;
+    }
+
+    .content-Box {
+      width: 100%;
+    }
+
+    .main-body {
+      margin-left: 20px;
+      margin-right: 20px;
+      z-index: 0;
+      padding-top: 550px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+    }
+    /*Menu Bar small window*/
+    .SNmenu-bar {
+      overflow-x: auto;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .SNmanupoint {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      height: 20px;
+      width: auto;
+      background-color: white;
+      border-radius: 30px;
+      padding: 20px;
+      margin: 5px;
+      transition: background-color 0.30s ease-in-out;
+    }
+
+    .IconsSN {
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .SNmanupoint:hover {
+      background-color: $lightGraySearchbar;
+    }
+
+    .SNmenupoint-selected {
+      background-color: $BackgroundDark;
+      color: $white;
+    }
+  }
+
+
+  @media only screen and (min-width: 1230px) {
+    .SNmanupoint {
+      display: none;
+    }
+  }
+  /*Top Bar*/
+
+  .tool-bar {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 45px;
+    width: 100%;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.1);
+  }
+
+.test{
+    background-color: red;
+}
+
+.btn-abosyncStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: auto;
+  padding: 10px;
+  background-color: $white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+  .btn-icon {
+    height: 14px;
+    padding-right: 10px;
+  }
+
+  .btn-abosyncStyle:hover {
+    background-color: $lightGraySearchbar;
+  }
+
+  .border-toolbar {
+    display: flex;
+  }
+  /*Abo amount*/
+  .as-aboContent {
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 220px;
+    width: 350px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px 2px rgb(24, 24, 24, 0.1);
+  }
+
+  .information-as {
+    margin-top: 40px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .as-amount {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .as-amount-light {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 200;
+  }
+
+  .as-amount-in {
+    font-size: 20px;
+    text-align: center;
+    background-color: $menu-point-hover;
+    border-radius: 5px;
+    border: none;
+    width: 7rem;
+  }
+
+  .as-details {
+    height: auto;
+    width: auto;
+  }
+  /**/
+  .as-detailsAbo {
+    display: flex;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    background-color: $white;
+    box-shadow: 2px 2px 5px 2px rgb(24, 24, 24, 0.1);
+    padding: 10px;
+  }
+
+  .as-formfont {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    max-height: 40px;
+  }
+
+  .as-form {
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .as-form input {
+    border: none;
+    background-color: $menu-point-hover;
+    padding: 5px;
+    border-radius: 5px;
+  }

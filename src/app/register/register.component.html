@@ -1,0 +1,99 @@
+<!-- registration.component.html -->
+
+
+  <!--Hintergund hunzufügen-->
+  <div class="login-container">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+      <div class="register-form container-fluid ">
+        <div class="flex-container">
+          <div class="flex-item">
+            <button class="svg-button closeThis" id="buttonBack" (click)="goBack()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-backspace">
+                <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"></path>
+                <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="flex-item logo">
+            <img src="assets/svgs/abosync-a.svg" alt="Logo">
+          </div>
+          <div class="flex-item">
+            <button class="svg-button" [routerLink]="['/']">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <form (ngSubmit)="register()" #registrationForm="ngForm">
+          <div class="closeThis" id="companydetails">
+            <h2>Rechnungs Adresse</h2>
+            <h6>Geben Sie Ihre Daten an.</h6>
+          </div>
+          <div id="logindetails">
+            <h2>Registrieren</h2>
+            <h6>Bitte geben Sie Ihre Anmeldedaten ein.</h6>
+          </div>
+
+
+
+          <div>
+            <input type="text" id="username" class="form-control " name="username" [(ngModel)]="userData.username" placeholder="Username" required>
+            <input type="email" id="email" class="form-control " name="email" [(ngModel)]="userData.email" placeholder="E-Mail" required>
+            <input type="password" id="password" class="form-control " name="password" [(ngModel)]="userData.password" placeholder="Password" required>
+            <input type="password" id="password1" class="form-control " name="password" [(ngModel)]="userData.password1" placeholder="Password confirm" required>
+          </div>
+
+          <input type="text" id="firmenname" class="form-control closeThis" name="firmenname" [(ngModel)]="userData.firmenname"  placeholder="Firma (Optional)">
+          <input type="text" id="first_name" class="form-control closeThis" name="first_name" [(ngModel)]="userData.first_name" placeholder="Vorname*" required>
+          <input type="text" id="last_name" class="form-control closeThis" name="last_name" [(ngModel)]="userData.last_name" placeholder="Nachname*" required>
+          <input type="text" id="street" class="form-control closeThis" name="street" [(ngModel)]="userData.street" placeholder="Straße, Hausnummer*" required /> 
+          <input type="text" id="postleitzahl" class="form-control closeThis" name="postleitzahl" [(ngModel)]="userData.postleitzahl" placeholder="Postleitzahl*" required>
+          <input type="text" id="ort" class="form-control  closeThis" name="ort " [(ngModel)]="userData.ort" placeholder="Ort*" required>
+          <input type="text" id="land" class="form-control  closeThis" name="land" [(ngModel)]="userData.land" placeholder="Land*" required>
+          <h6 class="register-placeholder" (click)="sendToRights()" > <a>Hier gehts zur AGB und dem Datenschutz</a></h6>
+          <!-- Display success message -->
+         
+          <!-- Display error message -->
+
+          <p-toast></p-toast>
+          <br />
+          <button class="btn-1 closeThis" id="registerButton" type="submit">Registrieren</button>
+        </form>
+        
+        <button class="btn-1 " id="Hidebutton" (click)="hideElement()">Weiter</button>
+      </div>
+    </div>
+  </div>
+  <!--Ende-->
+
+
+<!--
+            <input type="text" id="firmenname" class="form-control" name="firmenname" [(ngModel)]="userData.firmenname" placeholder="Firmenname" required>
+            <input type="text" id="first_name" class="form-control" name="first_name" [(ngModel)]="userData.first_name" placeholder="Vorname" required>
+            <input type="text" id="last_name" class="form-control" name="last_name" [(ngModel)]="userData.last_name" placeholder="Nachname" required>
+            <input type="text" id="postleitzahl" class="form-control" name="postleitzahl" [(ngModel)]="userData.postleitzahl" placeholder="Postleitzahl" required>
+            <input type="text" id="ort" class="form-control" name="ort" [(ngModel)]="userData.ort" placeholder="Ort" required>
+            <input type="text" id="land" class="form-control" name="land" [(ngModel)]="userData.land" placeholder="Land" required>
+
+<div class="register-container">
+
+  <div>
+    <h2>Registrierung</h2>
+    <form (ngSubmit)="register()" #registrationForm="ngForm">
+
+      <input type="text" id="username" class="form-control" name="username" [(ngModel)]="userData.username" required>
+      <input type="email" id="email" class="form-control" name="email" [(ngModel)]="userData.email" required>
+      <input type="password" id="password" class="form-control" name="password" [(ngModel)]="userData.password" required>
+      <input type="text" id="firmenname" class="form-control" name="firmenname" [(ngModel)]="userData.firmenname" required>
+      <input type="text" id="first_name" class="form-control" name="first_name" [(ngModel)]="userData.first_name" required>
+      <input type="text" id="last_name" class="form-control" name="last_name" [(ngModel)]="userData.last_name" required>
+      <input type="text" id="postleitzahl" class="form-control" name="postleitzahl" [(ngModel)]="userData.postleitzahl" required>
+      <input type="text" id="ort" class="form-control" name="ort" [(ngModel)]="userData.ort" required>
+      <input type="text" id="land" class="form-control" name="land" [(ngModel)]="userData.land" required>
+
+      <button class="btn-1" type="submit" [disabled]="!registrationForm.valid">Registrieren</button>
+    </form>
+    
+  </div>
+</div>-->

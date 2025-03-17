@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.336" height="24.794" viewBox="0 0 28.336 24.794">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#48abf4"/>
+      <stop offset="1" stop-color="#ee31da" stop-opacity="0.271"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_open-home" data-name="Icon open-home" d="M14.168,0,0,10.626H3.542V24.794h7.084V17.71H17.71v7.084h7.084V10.52l3.542.106Z" fill="url(#linear-gradient)"/>
+</svg>

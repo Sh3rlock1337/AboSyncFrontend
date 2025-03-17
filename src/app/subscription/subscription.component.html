@@ -1,0 +1,70 @@
+
+<!--Hintergund hunzufügen-->
+<div class="background bg-image">
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="main-boxes">
+      <h3>Wähle dein passendes Abo</h3>
+      <div class="grid">
+        <div (click)="onBasic()" class="basic-card">
+          <div class="header">
+            <span>BASIC</span>
+          </div>
+          <div class="icon-box">
+            <img src="/assets/svgs/basic.svg" alt="">
+          </div>
+          <div class="styler-arrow">
+            <div class="triangle">
+              <!--BASIC TRINAGLE-->
+            </div>
+          </div>
+          <div class="amount-box">
+            <div class="wrapper">
+              <div class="amount">
+                <h1>€4,99</h1>
+              </div>
+              <p>Pro Monat</p>
+            </div>
+          </div>
+          <div class="text-box">
+            <p>
+              Mit diesem Abo, können Sie bis zu 5 Abonements <br>
+              gleichzeitig in Ihrem Account verwalten.
+            </p>
+          </div>
+        </div>
+        <div (click)="onPremium()" class="basic-card">
+          <div class="header">
+            <span>Premium</span>
+          </div>
+          <div class="icon-box">
+            <img src="/assets/svgs/premium.svg" alt="">
+          </div>
+          <div class="styler-arrow">
+            <div class="triangle">
+              <!--BASIC TRINAGLE-->
+            </div>
+          </div>
+          <div class="amount-box">
+            <div class="wrapper">
+              <div class="amount">
+                <h1>€7,99</h1>
+              </div>
+              <p>Pro Monat</p>
+            </div>
+          </div>
+          <div class="text-box">
+            <p>
+              Genießen Sie die Verwaltung von <br>
+              unbgrenzt vielen Abonements
+              gelichzeitig in Ihrem Account.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="as_logout_wrapper">
+  <button (click)="settings()" class="logout4sub">Konto Einstellungen</button>
+</div>
+<!--Ende-->     

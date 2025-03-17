@@ -1,0 +1,42 @@
+<!-- login.component.html-->
+<div class="login-container">
+  <!--Your login form and content go here -->
+
+      <div class="container-fluid h-100 d-flex align-items-center justify-content-center">
+        <div class="row" class="Raster">
+                        <!-- Login-Bild links in der Mitte -->
+                        <div class="col-md-6 d-flex align-items-center justify-content-center">
+                          <div style="width: 100%;">
+                            <img class="img-fluid object-fit-cover" src="/assets/svgs/Logo.svg" alt="Logo-Main">
+                          </div>
+                        </div>
+                        <!-- Login-Formular rechts in der Mitte -->
+                        <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        </div>
+                        <div class="col-md-auto d-flex align-items-center justify-content-center loginform">
+                          <div style="max-width: 400px; width: 100%;">
+                            <!-- Verwendet max-width für die maximale Breite und width: 100% für Flexibilität -->
+                            <h2 class="h2">Anmelden</h2>
+                            <h4 class="h4">Neu bei Abosync? <a href="#" routerLink="/registration">Jetzt hier registrieren</a></h4>
+
+                            <div class="form-group">
+                              <form>
+                                <input type="text" class="form-control" id="username" placeholder="Username eingeben" [(ngModel)]="username" name="username" />
+                                <br />
+                                <input type="password" class="form-control" id="password" placeholder="Password eingeben" [(ngModel)]="password" name="password" />
+                                <br />
+                                <div>
+                                  <button class="btn-1" (click)="login()">Anmelden</button>
+                                </div>
+                              </form>
+
+                            </div>
+                            <h4 class="h4"><a [routerLink]="['/forgotpassword']" href="">Password vergessen?</a></h4>
+                            <p-toast></p-toast>
+                          </div>
+                         
+                        </div>
+                      </div>
+
+    </div>
+</div>

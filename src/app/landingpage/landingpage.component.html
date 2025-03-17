@@ -1,0 +1,187 @@
+<!--Menu Side-->
+
+<div id="menu-responsive" class="menu-wrapper hidden">
+  <div class="as-rmenu">
+      <button id="as-btn-close" class="as-btn-close">
+          <span>
+              <img src="/assets/svgs/close.svg" alt="">
+          </span>
+      </button>
+  </div>
+  <div class="res-menulist">
+      <ul>
+          <li>
+              <a href="" >Home</a>
+          </li>
+          
+          <li >
+              <a class="custom-cursor" (click)="sendToRegister()" >Registrieren</a>
+          </li>
+          <li >
+              <a class="custom-cursor" (click)="sendToLogin()" >Einloggen</a>
+          </li>
+      </ul>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="as-header">
+      <div id="menürow" class="navBar asHoS row">
+          <div class="as-logo col-md-4">
+              <img src="/assets/svgs/logo-landing.svg" alt="logo">
+          </div>
+          <!--Hier ist das menu, wenn responsive-->
+          <div id="burgermenu" class="as-burger-menu col-md-8 hidden">
+              <button id="btn-burgemenu" class="burgermenu-btn">
+                  <img src="/assets/svgs/Icon ionic-ios-menu.svg" alt="">
+              </button>
+          </div>
+          <div class="as-menu col-md-auto">
+            <button class="btn-as-menu">Home</button>
+            <!--   <button hidden class="btn-as-menu">
+                About
+                <span>
+                    <img src="/assets/svgs/arrow-down.svg" alt="dropdown">
+                </span>
+            </button> -->
+            <button (click)="sendToLogin()" class="btn-as-menu">
+              Einloggen
+            </button>
+            <button (click)="sendToRegister()" class="btn-as-menu">
+              Registrieren
+            </button>
+          </div>
+      </div>
+  </div>
+
+  <!--Section 1 image-->
+            <section class="as-container" data-scroll-section>
+              <div class="as-section">
+                <div class="as-img-mainpage">
+                  <!--Main Image-->
+                  <img class="img-fluid" src="/assets/images/ImgSection.png" alt="">
+                </div>
+              </div>
+            </section>
+
+            <!--Hier werden die grids angezeigt-->
+            <section class="as-container">
+              <div class="as-section2">
+                <div class="textarea">
+                  <h1 class="as-header-bold">Sicher. Einfach. Verwalten.</h1>
+                  <p>
+                    <br>
+                    Abosync ist DAS Tool, wenn es um die Verwaltung deiner Abonnements geht.
+                    <br>
+                    Einfach loslegen und immer benachrichtigt werden!
+                  </p>
+                  <div class="register-button">
+                    <button class="btn-register" (click)="sendToRegister()">Jetzt Registrieren</button>
+                  </div>
+                </div>
+                <div class="as-gridSysten">
+                  <div class="as-grid">
+                    <div class="as-gridcard item1">
+
+                    </div>
+                    <div class="as-gridcard item2">
+
+                    </div>
+                    <div class="as-gridcard item3">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+            <section class="as-container">
+              <div class="as-section3">
+                <h1 class="as-header-bold">Transparente Preise.</h1>
+                <div class="as-gridSysten2">
+                  <div class="as-grid2">
+                    <div class="as-gridcard Basic-Account">
+                      <div class="wrapper">
+                        <div class="basicCard">
+                          <h1>Basic</h1>
+                          <h6>FÜR EINZELPERSONEN UND UNTERNEHMEN</h6>
+                          <br>
+                          <p>
+                            Verwalte bis zu 5 Abos gleichzeitig!
+                            <br>
+                            Analysiere deine Abos, werde benachrichtigt von unserem Mail-Notifier!
+                            <!--
+                            <br />
+                            Mit AboSync behältst du den Überblick darüber, wann deine Abonnements abgerechnet werden.
+                            -->
+                          </p>
+                          <h1 class="price">
+                            4,99€
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="as-gridcard proAbo">
+                      <div class="wrapper">
+                        <div class="basicCard">
+                          <h1>Premium</h1>
+                          <h6>FÜR EINZELPERSONEN UND UNTERNEHMEN</h6>
+                          <br>
+                          <p>
+                            Alles, was du brauchst!
+                            Unlimited Abos
+                            <br>
+                            Analysiere deine Abos, werde benachrichtigt von unserem Mail-Notifier!
+                            <!--
+                                <br />
+  Mit AboSync behältst du den Überblick darüber, wann deine Abonnements abgerechnet werden.
+  -->
+                          </p>
+                          <h1 class="price">
+                            7,99€
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <footer class="as-footer">
+              <div class="container">
+                <div class="row">
+                  <!-- Footer Bereich für Kontaktinformationen -->
+                  <div class="col-md-4 footer-contact">
+                    <h3>Kontakt</h3>
+                    <p><strong style="color:white">E-Mail: </strong> <span style="color:white">support(AT)abosync.com</span></p>
+                    <!-- <p><strong>Telefon:</strong> +49 123 456 7890</p>-->
+                  </div>
+
+                  <!-- Footer Bereich für Links oder Informationen -->
+                  <div class="col-md-4 footer-links">
+                    <h3>Nützliche Links</h3>
+                    <ul>
+                      <li><a class="custom-cursor" (click)="datenschutz()">Datenschutz</a></li>
+
+                      <li><a class="custom-cursor" (click)="agb()">AGB</a></li>
+                      <li><a class="custom-cursor" (click)="impressum()">Impressum</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Footer Bereich für soziale Medien -->
+                  <div class="col-md-4 footer-social">
+                    <h3>Folg uns!</h3>
+                    <a href="#"><img src="/assets/svgs/icons8-facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="/assets/svgs/icons8-instagram.svg" alt="Instagram"></a>
+                  </div>
+                </div>
+
+
+              </div>
+              <div style="width: 100%; display: flex; justify-content: center; margin-top:20px; align-items: center;">
+                <a>© Copyright 2024 AboSync</a>
+              </div>
+            </footer>
+          </div>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="34.372" viewBox="0 0 30 34.372">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f49e48"/>
+      <stop offset="1" stop-color="#ee31da" stop-opacity="0.271"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f49e48"/>
+      <stop offset="1" stop-color="#ee31da"/>
+    </linearGradient>
+  </defs>
+  <g id="Gruppe_711" data-name="Gruppe 711" transform="translate(-67 -308.628)">
+    <path id="Icon_awesome-shopping-bag" data-name="Icon awesome-shopping-bag" d="M21.144,9.375V7.5A7.6,7.6,0,0,0,13.456,0,7.6,7.6,0,0,0,5.767,7.5V9.375H0V25.312A4.748,4.748,0,0,0,4.806,30h17.3a4.748,4.748,0,0,0,4.806-4.688V9.375ZM9.611,7.5a3.846,3.846,0,0,1,7.689,0V9.375H9.611Zm9.611,7.031a1.407,1.407,0,1,1,1.442-1.406A1.424,1.424,0,0,1,19.222,14.531Zm-11.533,0a1.407,1.407,0,1,1,1.442-1.406A1.424,1.424,0,0,1,7.689,14.531Z" transform="translate(67 308.628)" fill="url(#linear-gradient)"/>
+    <circle id="Ellipse_24" data-name="Ellipse 24" cx="8" cy="8" r="8" transform="translate(81 327)" fill="url(#linear-gradient-2)"/>
+    <path id="Icon_awesome-money-bill-wave-alt" data-name="Icon awesome-money-bill-wave-alt" d="M10.746,2.639A5.123,5.123,0,0,0,8.732,2.25C6.6,2.25,4.47,3.328,2.34,3.328a5.249,5.249,0,0,1-1.6-.237.591.591,0,0,0-.179-.028A.55.55,0,0,0,0,3.613V9.1a.55.55,0,0,0,.326.51A5.12,5.12,0,0,0,2.34,10C4.47,10,6.6,8.921,8.732,8.921a5.249,5.249,0,0,1,1.6.237.592.592,0,0,0,.179.028.55.55,0,0,0,.558-.55V3.148A.551.551,0,0,0,10.746,2.639ZM5.536,7.786A1.541,1.541,0,0,1,4.152,6.125,1.541,1.541,0,0,1,5.536,4.464,1.541,1.541,0,0,1,6.92,6.125,1.541,1.541,0,0,1,5.536,7.786Z" transform="translate(83.464 329)" fill="#fff"/>
+  </g>
+</svg>

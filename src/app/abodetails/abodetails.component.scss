@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+
+  $fontBlack: #141414;
+  $fontBlackLight: #818181;
+  $backgroundGray: #F5F5F5;
+  $lightGraySearchbar: #F2F2F2;
+  $menu-point-hover: #EDEDED;
+  $mainPink: #EE31DA;
+  $white: #FFFFFF;
+  /*Darkmode*/
+  $BackgroundDark: #060415;
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+  background-color: $backgroundGray;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+  color: $fontBlack;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+li {
+  color: $fontBlack;
+}
+
+span {
+  padding: 0px;
+  margin: 0px;
+}
+
+.Background {
+  position: fixed;
+  top: -80px;
+  right: -50px;
+}
+
+.top-Bar {
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 8.5px );
+  -webkit-backdrop-filter: blur( 8.5px );
+  border-radius: 0px 0px 10px 10px;
+  position: fixed;
+  height: auto;
+  z-index: 1;
+}
+
+.logo-top-bar img {
+  height: 35px;
+  width: auto;
+}
+
+.top-bar-content {
+  padding-left: 45px;
+  padding-right: 45px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.mid-colm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar-top {
+  height: 38px;
+  width: 450px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  background-color: $lightGraySearchbar;
+}
+
+
+.accountDetails {
+  position: static;
+  display: inline-flex;
+  height: 38px;
+  width: auto;
+  align-items: center;
+  padding-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.accountDetails:hover {
+  background-color: $backgroundGray;
+}
+
+.image-profil {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-right: 10px;
+  height: 35px;
+  width: 35px;
+  background-color: $backgroundGray;
+}
+
+
+/*Hier beschreibe ich den Body*/
+.main-body {
+  z-index: 0;
+  padding-top: 120px;
+  display: flex;
+  overflow: hidden;
+}
+
+
+/*Main Left Menu*/
+
+.inpage-Navigation-left {
+  margin-left: 57px;
+  position: fixed;
+  overflow: hidden;
+}
+
+/*Main Right Content*/
+.content-area {
+  width: auto;
+  margin-left: 30%;
+}
+
+
+
+.username-hello {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+.menu-content {
+  margin-top: 20px;
+}
+
+.Menu-Point-Style {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.Menu-Point-Style:hover {
+  background-color: $menu-point-hover;
+  border-radius: 10px;
+  transition: background-color 0.25s ease 0s;
+}
+
+.Menu-Icons {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.Menu-Point-Is-Selected {
+  background-color: $white;
+  border-radius: 10px;
+}
+
+/*Responsive view menu*/
+
+
+
+.headline {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+
+
+.headline-smaller-abos {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/*Design der Abo - Card*/
+
+.abo-card {
+  margin-top: 15px;
+  margin-right: 15px;
+  margin: none;
+  border: none;
+  border-radius: 10px;
+  padding: 0px 0px;
+  width: auto;
+}
+
+.card-body {
+  flex-grow: 1;
+}
+
+
+.abo-img {
+  height: 120px;
+  width: 120px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.abo-img img {
+  /*Hier kommt das Bild*/
+  height: 120px;
+  width: 120px;
+  border-radius: 10px;
+}
+
+.Categorie {
+  font-size: 12px;
+  font-weight: bold;
+  color: $mainPink;
+}
+
+.NameOfAbo {
+  font-size: 14px;
+}
+
+.DateOdPayment {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+
+/*Darkmode Button*/
+
+.darkmode-Button {
+  display: flex;
+  justify-content: center;
+}
+
+/*Darmode Button*/
+
+.DarkmodeLightmodeButton {
+  margin-top: 15px;
+  height: 55px;
+  width: 55px;
+  border: none;
+  border-radius: 40px;
+  background-color: $menu-point-hover;
+  transition: width 0.25s ease-in-out, border-radius 0.25s ease-in-out, background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.DarkmodeLightmodeButton:hover {
+  height: 55px;
+  width: 293px;
+  border-radius: 10px;
+  background-color: $menu-point-hover;
+  color: #c89410;
+}
+
+
+/*Show Abo Details*/
+.AboBanner {
+  height: 180px;
+  width: 800px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  position: absolute;
+  margin: 0px;
+}
+
+.AboBanner-Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  width: 800px;
+  background: rgba( 255, 255, 255, 0 );
+  backdrop-filter: blur( 40px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.AS-Logo {
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
+  box-shadow: 0px 0px 0px rgb(24, 24, 24, 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.AS-AboName {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.imgAboDetails {
+  border: none;
+  padding: 0px;
+  border-radius: 10px;
+}
+
+.AboDetails {
+  display: flex;
+  align-items: center;
+}
+
+.HeadlineAbo {
+  margin-left: 30px;
+  font-size: 60px;
+  font-weight: bold;
+  color: $white;
+}
+
+
+.content-Box {
+  overflow: auto;
+  height: 570px;
+  width: 800px;
+  padding-top: 20px;
+  border-radius: 0px 0px 10px 10px;
+  overflow: hidden;
+}
+
+.top-button-bar {
+  height: auto;
+  width: auto;
+  display: flex;
+}
+
+.bt-rounded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: auto;
+  color: $white;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: none;
+  border: 1px solid $white;
+}
+
+.bt-rounded:hover {
+  border: 2px solid $white;
+}
+
+.display-box-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: auto;
+  background-color: $mainPink;
+  color: $white;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.categorieBanner {
+  margin-left: 20px;
+}
+
+.icon-banner {
+  margin-right: 10px;
+}
+
+/*Information Box*/
+.Aboinformation-Box {
+  margin-top: 20px;
+  height: auto;
+  width: auto;
+  background: $white;
+  backdrop-filter: blur( 8.5px );
+  -webkit-backdrop-filter: blur( 8.5px );
+  border-radius: 5px;
+}
+
+.headline-infoBox {
+  font-size: 12px;
+  color: $fontBlackLight;
+}
+
+.Icon-Box {
+  color: $fontBlackLight;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.headline-infoBoxBold {
+  color: $fontBlackLight;
+  text-align: center;
+}
+
+.headline-boxabo {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: auto;
+  background-color: rgba(194, 194, 194, 0.4);
+  border-radius: 5px 5px 0px 0px;
+}
+
+.paymentDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: auto;
+  height: auto;
+}
+
+.amount-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.amount-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  height: 250px;
+  width: 250px;
+  background-color: $backgroundGray;
+  border-radius: 10px;
+}
+
+.amountHeadline {
+  font-size: 14px;
+  color: $backgroundGray;
+}
+
+.amountFont {
+  font-size: 25px;
+}
+
+.amountIcon {
+  height: 25px;
+  width: auto;
+  color: $mainPink;
+}
+
+.amountHeadlinePink {
+  margin-top: 30px;
+  font-size: 11px;
+  color: $mainPink;
+}
+
+/*
+background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.5px );
+-webkit-backdrop-filter: blur( 8.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+*/
+
+.as-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*Abo Details*/
+.as-aboContent {
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-right: 20px;
+  height: 220px;
+  width: 350px;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 5px 2px rgb(24, 24, 24, 0.1);
+}
+
+.information-as {
+  margin-top: 40px;
+  position: absolute;
+  text-align: center;
+}
+
+.as-amount {
+  font-size: 20px;
+  text-align: center;
+}
+
+.as-amount-light {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.as-details {
+  height: auto;
+  width: auto;
+}
+
+
+/*Top Bar*/
+
+.tool-bar {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 45px;
+  width: 100%;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.1);
+}
+
+.btn-abosyncStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: auto;
+  padding: 10px;
+  background-color: $white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-icon {
+  height: 14px;
+  padding-right: 10px;
+}
+
+.btn-abosyncStyle:hover {
+  background-color: $lightGraySearchbar;
+}
+
+.border-toolbar {
+  display: flex;
+}
+
+
+/*Test default image*/
+.as-defaultImage {
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
+  box-shadow: 0px 0px 0px rgb(24, 24, 24, 0.5);
+  background-color: $mainPink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter1{
+  display: flex;
+  font-size: 40px;
+  color: white;
+}
+
+.as-defaultbg {
+  height: 100%;
+  width: 100%;
+  background-color: #FF9AFD;
+}
+
+.AboBanner-default {
+  height: 180px;
+  width: 800px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  position: absolute;
+  margin: 0px;
+}

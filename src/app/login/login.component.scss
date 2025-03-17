@@ -1,0 +1,91 @@
+.login-container {
+    background-image: url('/assets/images/Backgroundimage.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+
+
+  .Raster{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+  }
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+  .form-group{
+    width: auto;
+    margin: 20px;
+    text-align: right;
+  }
+
+.btn-1{
+    height: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #DD45D6;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-left: auto;
+}.btn-1:hover {
+    transition: 0.3s; /* Hinzufügen einer sanften Übergangsanimation */
+    background-color: #BB33B5;  /* Etwas dunklerer Farbton für den Hover-Effekt */
+}
+
+
+  .h2{
+    padding-left: 20px;
+
+  }
+  .h4{
+    font-size: 14px;
+    padding-left: 20px;
+  }
+
+  .loginform {
+    background-color: white;
+    border-radius: 5px;
+    height: 50%;
+    width: 60%;
+    padding-left: 30px;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-right: 30px;
+  }
+  .form-control{
+    background-color: white;
+    height: 45px;
+    width: 100%;
+    padding-right: 60px;
+    border-width: 1.5px;
+    border-color: darkgrey;
+  }
+
+  img{
+    height: 20%;
+    width: auto;
+
+  }
+
+
+  .vertical-divider {
+    border-right: 1px solid #000; /* Farbe und Dicke des Trennstrichs*/
+    height: 100%; /* Füllt die Höhe des Containers aus*/
+    margin-right: 10px; /* Optional: Abstand rechts vom Trennstrich*/
+
+  }
+
+
+

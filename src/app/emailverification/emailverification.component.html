@@ -1,0 +1,46 @@
+
+<div class="login-container" *ngIf="isLoggedIn()">
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="register-form container-fluid ">
+      <div class="flex-container">
+        <div class="flex-item">
+          <button class="svg-button closeThis" id="buttonBack">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-backspace">
+              <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"></path>
+              <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex-item logo">
+          <img src="/assets/svgs/abosync-a.svg" alt="Logo">
+        </div>
+        <div class="flex-item">
+          <button class="svg-button" (click)="logout()" [routerLink]="['/']">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+              <path d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <form (ngSubmit)="send()" #emailCodeForm="ngForm">
+        <div class="" id="verfi">
+          <h2>Email Verifikation</h2>
+          <h6>Gib den Code ein den wir dir per Mail zugesendet haben.</h6>
+        </div>
+
+
+        <input type="number" id="code" class="form-control" name="code" [(ngModel)]="userData.code" placeholder="123456" required>
+        <!-- Display success message -->
+        <!-- Display <button (click)="logout()">Logout</button>error message -->
+
+
+        <br />
+        <h6>E-Mail erneut senden *<a style="color: blue; cursor: pointer; " (click)="resendMail()">click</a>*</h6>
+        <br />
+        <button class="btn-1" id="submit" [disabled]="!emailCodeForm.valid" type="submit">Verifizieren</button>
+        <p-toast></p-toast>
+      </form>
+
+    </div>
+  </div>
+</div>

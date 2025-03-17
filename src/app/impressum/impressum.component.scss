@@ -1,0 +1,541 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: auto;
+  font-family: "sofia-pro", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 0;
+}
+
+
+ $greytext: #474747;
+ $pink: #EE31DA;
+ $black: #0f0f0f;
+ $gray: #121212;
+ $lightGray: #ececec;
+
+
+/*Navigation bar*/
+.navBar {
+  height: 60px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: border-radius 0.3s ease-in;
+}
+
+.as-header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 60px;
+  margin-top: 20px;
+  z-index: 10000;
+}
+
+.asHoS {
+  background: rgba(18, 18, 18, 0.2);
+  backdrop-filter: blur( 5.5px );
+  -webkit-backdrop-filter: blur( 5.5px );
+  border-radius: 80px;
+  border: 0.4px solid $black;
+}
+
+.as-logo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.as-logo img {
+  height: 30px;
+}
+
+.as-menu {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+/**/
+
+.btn-as-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-left: 20px;
+  padding: 0px 20px 0px 20px;
+  transition: background-color 0.2s ease-in;
+  border-radius: 20px;
+}
+
+.btn-as-menu img {
+  height: 13px;
+  width: 13px;
+  margin-left: 10px;
+}
+
+.btn-as-menu:hover {
+  border-radius: 20px;
+  background-color: $greytext;
+}
+
+/*Section1*/
+
+.as-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+
+.as-section {
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.as-img-mainpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.as-img-mainpage img {
+  max-height: 100%;
+}
+
+/*section2*/
+
+.as-section2 {
+  margin-top: auto;
+  height: 150vh;
+  width: 70%;
+  padding-top: 100px;
+  margin-bottom: 10%;
+}
+
+.as-header-bold {
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+}
+
+.textarea p {
+  text-align: center;
+  color: $greytext;
+  font-size: 18px;
+}
+
+
+.register-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+}
+
+.btn-register {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  padding: 0px 20px 0px 20px;
+  background-color: $pink;
+  color: white;
+  transition: background-color 0.3s ease-in;
+}
+
+.btn-register:hover {
+  background-color: #d32cc2;
+}
+
+/*Grid System*/
+
+.as-gridSysten {
+  padding: 30px;
+  margin-top: 50px;
+  height: 80%;
+  width: 100%;
+}
+
+.as-grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-areas:
+    "item1 item1" "item2 item3";
+}
+
+.as-gridcard {
+  border-radius: 20px;
+  padding: 20px;
+  height: 100%;
+}
+
+.item1 {
+  grid-area: item1;
+  background-image: url('/assets/images/Bild-item1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.item2 {
+  grid-area: item2;
+  background-image: url('/assets/images/item-2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.item3 {
+  grid-area: item3;
+  background-image: url('/assets/images/item3.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/*Footer*/
+
+.as-footer {
+  z-index: 1;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: $gray;
+  padding: 30px;
+}
+
+.footer-contact {
+  color: white;
+}
+
+.footer-links {
+  color: white;
+  list-style: none;
+}
+
+.footer-social {
+  color: white;
+}
+
+ul {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+a {
+  color: white !important;
+}
+
+.footer-links li {
+  list-style: none;
+}
+
+
+
+/*Responsive*/
+
+@media screen and (max-width: 900px) {
+  .as-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .as-section2 {
+    padding: 10px;
+    width: 100%;
+    padding-top: 0px;
+  }
+
+  .as-gridSysten {
+    margin-top: 80px;
+    padding: 10px;
+  }
+
+  .as-grid {
+    height: 50%;
+  }
+
+  .as-section3 {
+    width: 100%;
+    padding: 10px;
+    padding-top: 0px;
+  }
+}
+
+.custom-cursor {
+  cursor: pointer; /* Zeigt den Cursor als Handzeiger an */
+}
+
+.as-burger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 20px;
+}
+
+
+@media screen and (max-width: 1080px) {
+  .as-menu {
+    display: none;
+  }
+
+  .asHoS {
+    background: rgba(18, 18, 18, 0.2);
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border: 0.4px solid $black;
+  }
+
+  /*Navigation bar*/
+  .navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 70%;
+    padding-left: 20px;
+  }
+
+  .as-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .as-section2 {
+    height: 100vh;
+  }
+
+  .as-section3 {
+    width: 100vw;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+/*Menu responsive*/
+
+.menu-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  left: 0px;
+  z-index: 101;
+}
+
+.as-rmenu {
+  height: 40px;
+  width: 100%;
+  top: 0px;
+  z-index: 102;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 20px;
+}
+
+.as-btn-close {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  transition: background-color 0.3s ease-in;
+}
+
+.as-btn-close img {
+  height: 16px;
+  width: auto;
+}
+
+.as-btn-close:hover {
+  background-color: $lightGray;
+}
+
+.res-menulist {
+  height: 100vh;
+  width: 100%;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.res-menulist li {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 40px;
+  width: 100%;
+  background-color: transparent;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding-left: 20px;
+  transition: background-color 0.2s ease-in;
+}
+
+.res-menulist a {
+  text-decoration: none;
+  color: black !important;
+}
+
+.res-menulist li:hover {
+  background-color: $lightGray;
+}
+
+.burgermenu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  height: 45px;
+  width: 45px;
+  border-radius: 40px;
+  transition: background-color 0.3s ease-in;
+}
+
+.burgermenu-btn:hover {
+  background-color: $greytext;
+}
+
+.burgermenu-btn img {
+  height: 15px;
+}
+
+/*scroll leiste*/
+
+/* Stylt die gesamte Scrollleiste */
+::-webkit-scrollbar {
+  width: 10px; /* Breite der Scrollleiste */
+}
+
+/* Stylt den Schieberegler (Thumb) der Scrollleiste */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Farbe des Thumbs */
+  border-radius: 5px; /* Rundung der Ecken des Thumbs */
+}
+
+/* Stylt den Track der Scrollleiste */
+::-webkit-scrollbar-track {
+  background: #000000; /* Farbe des Tracks */
+}
+
+/* Fügt Hover-Effekte zum Thumb hinzu */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Farbe des Thumbs beim Hover */
+}
+
+.as-Abos {
+  width: 70vw;
+  height: 100vh;
+}
+
+.as-gridSysten2 {
+  padding: 30px;
+  margin-top: 50px;
+  height: 60%;
+  width: 100%;
+}
+
+.as-grid2 {
+  display: flex;
+  height: auto;
+  width: 100%;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-areas:
+    "item2 item3";
+}
+
+.Basic-Account {
+  grid-area: item2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 400px;
+}
+
+.basicCard {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+.basicCard h1 {
+  height: 45px;
+  font-weight: 700;
+  color: black;
+}
+
+.price {
+  font-size: 50px;
+}
+
+.as-section3 {
+  margin-top: auto;
+  height: 60vh;
+  width: 70%;
+  margin-bottom: 15%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.proAbo {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}

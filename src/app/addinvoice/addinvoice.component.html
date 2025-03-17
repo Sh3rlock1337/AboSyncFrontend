@@ -1,0 +1,229 @@
+<div *ngIf="isLoggedIn()">
+  <div *ngIf="getAuthenticated()">
+
+    <div class="Background-Bubbles">
+      <img class="Background" src="/assets/images/Bubbles.png" alt="">
+    </div>
+
+    <!--Top-Bar-->
+    <nav class="top-Bar navbar-expand-lg container-fluid">
+      <div class="row top-bar-content">
+        <div class="col-md-auto logo-top-bar">
+          <img src="/assets/images/Logo-Voll.svg" alt="">
+        </div>
+        <div class="col d-flex align-items-center justify-content-center">
+         
+        </div>
+        <div class="col-md-auto thirdcolumn-account">
+          <div class="accountDetails" *ngIf="companyData">
+            <div class="image-profil" *ngIf="user">
+              <div class="firstname profile-letters">{{ user.first_name.charAt(0) }}</div>
+              <div class="lastname profile-letters">{{ user.last_name.charAt(0) }}</div>
+            </div>
+            <div class="company-name profile-letters">{{companyData.firmenname}}</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--Platz für die Mobile Nav-Bar-->
+    <!--End of mobile Nav-Bar-->
+
+    <div class="main-body row">
+      <!--Left Content-->
+      <div class="inpage-Navigation-left col-md-auto" id="inpage-Navigation-left">
+        <div class="username-hello">
+          <p>Willkommen,</p>
+          <div class="username-hello" *ngIf="user">
+            <p>{{user.first_name}} {{user.last_name}} 👋</p>
+          </div>
+        </div>
+        <!--Menu-Left-->
+        <div class="menu-content">
+          <ul class="Menu-Points">
+            <li routerLink="/dashboard" class="Menu-Point-Style">
+              <img class="Menu-Icons" src="/assets/svgs/Dashboard.svg" alt="Dashboard">
+              Dashboard
+            </li>
+
+            <!--   <li class="Menu-Point-Style">
+              <img class="Menu-Icons" src="/assets/svgs/Shopping.svg" alt="Shopping">
+              Shopping
+            </li>
+            <li class="Menu-Point-Style">
+              <img class="Menu-Icons" src="/assets/svgs/CarManagement.svg" alt="CarManagement">
+              Flottenmanagement
+            </li> -->
+            <li class="Menu-Point-Style" routerLink="/settings">
+              <img class="Menu-Icons" src="/assets/svgs/Settings.svg" alt="Settings">
+              Settings
+            </li>
+            <li class="Menu-Point-Style" (click)="logout()">
+              <img class="Menu-Icons" src="/assets/svgs/as-logout.svg" alt="Settings">
+              Ausloggen
+            </li>
+          </ul>
+          <div class="darkmode-Button" hidden>
+            <button class="DarkmodeLightmodeButton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Right Content-->
+      <div class="content-area container-fluid" id="content-area">
+
+        <div class="tool-bar">
+          <div class="border-toolbar">
+            <button routerLink="/dashboard" class="btn-abosyncStyle">
+              <img class="btn-icon" src="/assets/svgs/ionic-ios-arrow-back.svg" alt="AS-Add">
+              Zurück
+            </button>
+            <p-toast></p-toast>
+            <button class="btn-abosyncStyle"  (click)="submitForm()" [hidden]="!buttonSichtbar">
+              <img class="btn-icon" src="/assets/svgs/awesome-save.svg" alt="">
+              Speichern
+            </button>
+
+
+
+
+            <button routerLink="/dashboard" class="btn-abosyncStyle" [hidden]="!buttonSichtbar">
+              <img class="btn-icon" src="assets/svgs/ionic-ios-close.svg" alt="">
+              Abbrechen
+            </button>
+          </div>
+        </div>
+        <!--Menu side small-->
+        <div class="SNmenu-bar">
+          <div class="SNmanupoint SNmenupoint-selected" routerLink="/dashboard">
+            <img class="IconsSN" src="/assets/svgs/Dashboard.svg" alt="">
+            <span class="SNmenuOptionText">Dashboard</span>
+          </div>
+          <!--      <div class="SNmanupoint">
+            <img class="IconsSN" src="/assets/svgs/AbosManagement.svg" alt="">
+            <span class="SNmenuOptionText">Verwaltung</span>
+          </div>
+          <div class="SNmanupoint">
+            <img class="IconsSN" src="/assets/svgs/Shopping.svg" alt="">
+            <span class="SNmenuOptionText">Shopping</span>
+          </div>
+          <div class="SNmanupoint">
+            <img class="IconsSN" src="/assets/svgs/CarManagement.svg" alt="">
+            <span class="SNmenuOptionText">Flottenmanagement</span>
+          </div> -->
+          <div class="SNmanupoint" routerLink="/settings">
+            <img class="IconsSN" src="/assets/svgs/Settings.svg" alt="">
+            <span class="SNmenuOptionText">Settings</span>
+          </div>
+        </div>
+        <div class="AboBanner container-fluid" id="AboBannerBackGround">
+          <div class="AboImage">
+            <!--Hier kommt das Bild hin-->
+            <div class="input-container">
+              <label class="input-container" for="fileInput">
+                <svg class="AddImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+
+                </svg>
+              </label>
+              <input type="file" id="fileInput" (change)="onFileSelected($event)" style="display: none;">
+            </div>
+          </div>
+          <div class="AboDetails">
+            <!--Name hinzufügen-->
+            <input class="addNameOfAbo" id="aboname" [(ngModel)]="nameOfAbo" type="text" placeholder="Name eingeben">
+            <!--
+             <p class="HeadlineAbo">Netflix Family</p>
+            -->
+          </div>
+        </div>
+        <!--Main Contetn - Information-->
+        <div class="row">
+          <div class="as-details col-md-auto">
+            <div class="as-aboContent">
+              <div class="information-as">
+                <input class="as-amount-in" placeholder="€" min="0"type="number" [(ngModel)]="priceOfAbo" name="priceOfAbo" id="price">
+                <p class="as-amount-light">pro Monat</p>
+                <p class="as-amount-light">
+                  Dieses Abo wird {{priceOfAbo}}€ Ihrer
+                  <br>
+                  monatlichen Kosten sein.
+                </p>
+              </div>
+              <div class="as-content-abo">
+                <p>Ausgaben</p>
+                <img src="/assets/svgs/ShowAboAmmount.svg" alt="">
+              </div>
+            </div>
+            <div class="as-detailsAbo col-md-auto" style="height: 60px;">
+              <div class="as-listdetails row">
+                <div class="as-formfont col-md-auto">
+                  <p>Abrechnung</p>
+                </div>
+                <div class="as-form col-md-auto">
+                  <input type="date" id="start" name="trip-start" [(ngModel)]="startDate" value="" min="" [max]="today">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="as-detailsAbo col-md-auto" style="height: 60px; margin-left: 25px;">
+            <div class="as-listdetails row">
+              <div class="as-formfont col-md-auto">
+                <p>Kategorie</p>
+              </div>
+              <div class="as-form col-md-auto">
+                <div class="dropDown">
+                  <div class="selectOption-Btn" (click)="toggleDropdownKat()">
+                    <img *ngIf="selectedImage" [src]="selectedImage" class="iconInButton">
+                    <span class="btn_text">
+
+                      {{ selectedText || 'Bitte auswählen' }}
+                    </span>
+                    <svg class="dropdownarrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
+                    </svg>
+                  </div>
+                  <ul class="optionsList" [class.optionsListShow]="showOptions">
+                    <li *ngFor="let option of options" class="option" (click)="selectOption(option)">
+                      <img [src]="option.imgSrc" [alt]="option.text">
+                      <span class="optionText">{{ option.text }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="as-detailsAbo col-md-auto" style="height: 60px; margin-left: 25px;">
+            <div class="as-listdetails row">
+              <div class="as-formfont col-md-auto">
+                <p>Intervall</p>
+              </div>
+              <div class="as-form col-md-auto">
+                <div class="dropDown">
+                  <div class="selectOption-Btn" (click)="toggleDropdown('interval')">
+                    <span class="btn_text">{{ selectedInterval || 'Bitte auswählen' }}</span>
+                    <svg class="dropdownarrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
+                    </svg>
+                  </div>
+                  <ul class="optionsList" [class.optionsListShow]="showDropdown === 'interval'">
+                    <li *ngFor="let interval of intervals" class="option" (click)="selectInterval(interval)">
+                      {{ interval.text }}
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

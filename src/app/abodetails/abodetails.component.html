@@ -1,0 +1,206 @@
+<div *ngIf="isLoggedIn()">
+  <div *ngIf="getAuthenticated()">
+    <div class="Background-Bubbles">
+      <img class="Background" src="/assets/images/Bubbles.png" alt="">
+
+    </div>
+    <!--Top-Bar-->
+    <nav class="top-Bar navbar-expand-lg container-fluid">
+      <div class="row top-bar-content">
+        <div class="col-md-auto logo-top-bar">
+          <img src="/assets/images/Logo-Voll.svg" alt="">
+        </div>
+        <div class="col d-flex align-items-center justify-content-center">
+          <input class="searchbar-top" type="text" placeholder="Suche z.B. Netflix">
+        </div>
+        <div class="col-md-auto thirdcolumn-account">
+          <div class="accountDetails" *ngIf="companyData">
+            <div class="image-profil">
+              <div class="firstname profile-letters">{{ user.first_name.charAt(0) }}</div>
+              <div class="lastname profile-letters">{{ user.last_name.charAt(0) }}</div>
+            </div>
+            <div class="company-name profile-letters">{{companyData.firmenname}}</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--Platz für die Mobile Nav-Bar-->
+    <!--End of mobile Nav-Bar-->
+
+    <div class="main-body row" *ngIf="abodetails">
+      <!--Left Content-->
+      <div class="inpage-Navigation-left col-md-auto" id="inpage-Navigation-left">
+        <div class="username-hello">
+          <p>Willkommen,</p>
+          <div class="username-hello" *ngIf="user">
+            <p>{{user.first_name}} {{user.last_name}} 👋</p>
+          </div>
+        </div>
+        <!--Menu-Left-->
+        <div class="menu-content">
+          <ul class="Menu-Points">
+            <li routerLink="/dashboard" class="Menu-Point-Style Menu-Point-Is-Selected">
+              <img class="Menu-Icons" src="/assets/svgs/Dashboard.svg" alt="Dashboard">
+              Dashboard
+            </li>
+
+            <!--  <li class="Menu-Point-Style">
+              <img class="Menu-Icons" src="/assets/svgs/Shopping.svg" alt="Shopping">
+              Shopping
+            </li>
+            <li class="Menu-Point-Style">
+              <img class="Menu-Icons" src="/assets/svgs/CarManagement.svg" alt="CarManagement">
+              Flottenmanagement
+            </li> -->
+            <li class="Menu-Point-Style" routerLink="/settings">
+              <img class="Menu-Icons" src="/assets/svgs/Settings.svg" alt="Settings">
+              Settings
+            </li>
+            <li class="Menu-Point-Style" (click)="logout()">
+              <img class="Menu-Icons" src="/assets/svgs/as-logout.svg" alt="Settings">
+              Ausloggen
+            </li>
+          </ul>
+          <div class="darkmode-Button" hidden>
+            <button class="DarkmodeLightmodeButton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Right Content-->
+      <div class="content-area container-fluid" id="content-area">
+        <div>
+
+          <div class="tool-bar">
+            <div class="border-toolbar">
+              <button routerLink="/dashboard" class="btn-abosyncStyle">
+                <img class="btn-icon" src="/assets/svgs/ionic-ios-arrow-back.svg" alt="AS-Add">
+                Zurück
+              </button>
+              <button class="btn-abosyncStyle" (click)="deleteAbo()" routerLink="/dashboard">
+                <img class="btn-icon" src="/assets/svgs/material-delete.svg" alt="">
+                Löschen
+              </button>
+            </div>
+          </div>
+
+
+          <div class="AboBanner row" id="AboBannerBackGround" *ngIf="imageUrl; else noImage" [style.background-image]="imageUrl">
+            <!-- Ihr Inhalt für den Fall, dass ein Bild vorhanden ist -->
+          </div>
+
+          <!-- Alternative Inhalte, wenn kein imageUrl vorhanden ist -->
+          <ng-template #noImage>
+            <div class="AboBanner row" id="AboBannerBackGround" style="background-image: url('/assets/images/defaultbackground.png')">
+              <!-- Ihr alternativer Inhalt, wenn kein Bild vorhanden ist -->
+
+            </div>
+          </ng-template>
+          <div class="AboBanner-Content">
+            <div class="as-wrapper">
+              <div class="AS-AboImage">
+                <div class="AS-Logo" *ngIf="imageUrl; else noImageLogo" [style.background-image]="imageUrl"></div>
+
+                <p class="AS-AboName">{{abodetails.name}}</p>
+                <ng-template #noImageLogo>
+                  <!-- Ihr alternativer Inhalt, wenn kein Bild vorhanden ist -->
+                  <div class="as-defaultImage">
+                    <div class="letter1">A</div>
+                    <div class="letter1">B</div>
+
+                  </div>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Main Contetn - Information-->
+        <div class="content-Box">
+          <div class="top-button-bar" *ngIf="abodetails">
+            <button hidden class="bt-rounded">als Favorit markieren</button>
+            <span class="display-box-card categorieBanner">
+              <span class="icon-banner">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tv-fill" viewBox="0 0 16 16">
+                  <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM2 2h12s2 0 2 2v6s0 2-2 2H2s-2 0-2-2V4s0-2 2-2z" />
+                </svg>
+              </span>
+              <span>
+                {{abodetails.kategorie.name}}
+              </span>
+
+            </span>
+          </div>
+          <div class="as-details row ms-0">
+            <div class="as-aboContent col-md-auto">
+              <div class="information-as">
+                <p class="as-amount">  {{ abodetails.preis }}€</p>
+                <p class="as-amount-light">{{intervallAsString}}</p>
+                <p class="as-amount-light">
+                  Dieses Abo kostet Sie {{newPriceStringOnIntervall}}€ 
+                  <br>
+                  monatlichen.
+                </p>
+              </div>
+              <div class="as-content-abo">
+                <p>Ausgaben</p>
+                <img src="/assets/svgs/ShowAboAmmount.svg" alt="">
+              </div>
+            </div>
+            <div class="as-aboContent col-md-auto">
+              <div class="information-as">
+                <p class="as-amount">  {{ gesamtPreisSeitBeginn }}€</p>
+                <p class="as-amount-light"> Seit: {{abodetails.abrechnungsdatum}}</p>
+                <p class="as-amount-light">
+                  Gesamtpreis der Abbuchungen,
+                  <br>
+                  seit dem das abo läuft bis jetzt.
+                </p>
+              </div>
+              <div class="as-content-abo">
+                <p>History</p>
+                <img src="/assets/svgs/ShowAboAmmount.svg" alt="">
+              </div>
+            </div>
+            <div class="as-aboContent col-md-auto">
+              <div class="information-as">
+                <p class="as-amount">  {{vergangeneMonate.toFixed(2)}} </p>
+                <p class="as-amount-light"> Monate</p>
+                <p class="as-amount-light">
+                  Das Abo {{abodetails.name}},
+                  <br>
+                  läuft bereits seit etwa {{vergangeneMonate.toFixed(0)}} Monaten.
+                </p>
+              </div>
+              <div class="as-content-abo">
+                <p>Monate</p>
+                <img src="/assets/svgs/ShowAboAmmount.svg" alt="">
+              </div>
+            </div>
+            <div class="as-aboContent col-md-auto">
+              <div class="information-as">
+                <p class="as-amount">  {{tageBisZurNaechstenAbrechnung.toFixed(0)}} </p>
+                <p class="as-amount-light"> Tage</p>
+                <p class="as-amount-light">
+                  Ihre nächste Abbuchung für findet in
+                  <br>
+                  etwa {{tageBisZurNaechstenAbrechnung.toFixed(0)}} Tagen statt.
+                </p>
+              </div>
+              <div class="as-content-abo">
+                <p>Abbuchung</p>
+                <img src="/assets/svgs/ShowAboAmmount.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
