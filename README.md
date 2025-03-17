@@ -65,6 +65,4 @@ Die Authentifizierung erfolgt über **JWT-Tokens**, die nach erfolgreichem Login
 ## Lizenz
 Dieses Projekt steht unter der **MIT-Lizenz**.
 
-## Kontakt
-Falls Fragen bestehen, bitte per GitHub Issues oder per E-Mail melden.
 
