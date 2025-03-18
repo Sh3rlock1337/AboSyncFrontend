@@ -19,8 +19,8 @@ Das Frontend von AboSync wurde mit **Angular** entwickelt und dient als Benutzer
 ### Setup
 ```sh
 # Repository klonen
-git clone https://github.com/dein-repository.git
-cd dein-repository/frontend
+git clone https://github.com/Sh3rlock1337/AboSyncFrontend.git
+cd src
 
 # Abhängigkeiten installieren
 npm install
